@@ -1,0 +1,552 @@
+
+
+:root
+{
+    --yellow:#FCDD26;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .3s cubic-bezier(.38,1.15,.7,1.12);
+}
+
+*::selection{
+    background:#333;
+    color:var(--yellow);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.3rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--yellow);
+}
+
+button
+{
+	display: inline-block;
+	margin-top: 1rem;
+	padding: .7rem 2.5rem;
+	font-size: 1.5rem;
+	border-radius: .5rem;
+	color: #333;
+	background:yellow;
+	position: relative;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+	overflow: hidden;
+	z-index: 0;
+	cursor: pointer;
+}
+button::before
+{
+	content: '';
+	position: absolute;
+	top: 0;left: 0;
+	height: 100%;
+    width:100%;
+    clip-path: polygon(0 0, 100% 0, 10% 25%, 0 100%);
+    z-index: -1;
+    background: #444;
+    transition: .3s cubic-bezier(.38,1.15,.7,1.12);
+}
+
+button:hover::before
+{
+    clip-path: polygon(0 0, 100% 0, 100% 100%,0 100%);
+}
+button:hover{color: yellow;}
+
+.heading
+{
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 40px;
+}
+/*Start header */
+main
+{
+    width: 100%;
+    height: 80px;
+    text-decoration: none;
+    list-style: none;
+    font-size: 30px;
+    color: #444;
+    background: white;
+    box-shadow: #444 1px 3px 10px 0px;
+    position:relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    z-index: 9999;
+}
+
+.bg-light
+{
+    background-color: #ffffff!important;
+}
+main #search-box
+{
+    position: absolute;
+    top:100%; left:0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background:var(--yellow);
+    padding:2rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    transform-origin: top;
+    transform: scale(0);
+    opacity: 0;
+}
+
+main #search-box #search
+{
+    width: 95%;
+    padding: 15px 4px;
+    margin-right: 10px;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+main h1
+{
+    font-size: 30px;
+    display: inline;
+    margin-left: 10px;
+}
+
+
+main .ho
+{
+    transform: rotate(54deg);
+    color: yellow;
+    font-size: 30px;
+}
+
+main .as
+{
+    display: inline;
+}
+
+main ul
+{
+    list-style: none;
+    margin-left: 225px;
+    margin-top: -71px;
+}
+
+main ul li 
+{
+    float:left;
+    margin-right: 30px;
+}
+
+main ul li a
+{
+    text-decoration: none;
+    color: #444;
+    font-size: 25px;
+}
+
+main ul li a:hover
+{
+    color: yellow;
+}
+
+main ol
+{
+    float: right;
+    list-style: none;
+}
+
+main ol li
+{
+    float: left;
+    margin-right: 15px;
+}
+
+main ol li:hover
+{
+    color: yellow;
+}
+
+/*End headre*/
+
+/*Start home */
+.home
+{
+    min-height: 80vh;
+    background: url(../img/home-bg.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.home .contact span
+{
+    display: block;
+    font-size: 25px;
+    margin-left: 50px;
+}
+
+.home .contact h3
+{
+    font-size: 40px;
+    margin-left: 50px;
+}
+
+.home .contact button
+{
+    margin: 25px 40px 25px;
+}
+/*End home */
+
+/*Start Category*/
+.category .heading .pa
+{
+    color: yellow;
+}
+
+.category .box-container
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.category .box-container .box
+{
+    width: 25rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+.category .box-container .box img{width: 100%;}
+
+.category .box-container .box h2
+{
+    font-size: 25px;
+    color: #444;
+    padding: 1rem;
+}
+/*end Category*/
+
+/*Start featur */
+.featur .box-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.featur .box-container .box
+{
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+    justify-content: center;
+    flex: 1  1 40rem;
+    margin: 20px;
+    position: relative;
+    border: .7px solid rgba(0,0,0,.1);
+    box-shadow:0 5px 10px rgba(0,0,0,.1) ;
+    border-radius: .5rem;
+}
+
+.featur .box-container .box img
+{
+    width: 20rem;
+}
+
+.featur .box-container .box .conatct h3
+{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.featur .box-container .box .pric
+{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    background: yellow;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.featur .box-container .box .conatct p{    font-size: 15px;
+    margin-bottom: 9px;}
+.featur .box-container .box i
+{
+    color: yellow;
+    letter-spacing: 5px;
+    font-size: 18px;
+    margin-bottom: 25px;
+} 
+/*End featur */
+
+/*Start Media*/
+.media
+{
+    min-height: 400px;
+    width: 100%;
+    background: url(../img/deal-bg.webp) no-repeat;
+    display: flex;
+    background-position: center;
+    align-items: center;
+    background-size: cover;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.media .box-container h3
+{
+    color: #fff;
+    margin-bottom: 21px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.media .box-container p
+{
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.media .box-container button{margin-left: 72px;}
+/*End Media*/
+/*Start product*/
+.product .box-container
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.product .box-container .box
+{
+    width: 30.33333%;
+    box-shadow: 2px 2px 0 rgb(0 0 0 / 7%);
+    border-radius: 10px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    margin-top: 30px;
+    border: .1rem solid rgba(0,0,0,.1);
+}
+
+.product .box-container .box img{
+    width: 50%;
+    float: left;
+}
+
+.product .box-container .box .contact i
+{
+    color: yellow;
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-top: 50px;
+}
+
+.product .box-container .box .contact h1{
+    margin-top: 20px;
+    margin-bottom: 11px;
+}
+
+.product .box-container .box .contact .right{
+    display: inline;
+    font-size: 15px;
+}
+
+.product .box-container .box .contact .rong
+{
+    display: inline;
+    text-decoration: line-through;
+    font-size: 15px;
+}
+
+.product .box-container .box .contact button{display: block; }
+/*End product*/
+
+/*Start offer*/
+.offer .box-container
+{
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.offer .box-container .box
+{
+    margin: 15px;
+    position: relative;
+    min-height: 200px;
+    width: 45%;
+}
+
+.offer .box-container .box img
+{
+    width: 100%;
+}
+
+.offer .box-container .box .contact
+{
+    position: absolute;
+    top:50%; left:10%;
+    transform:translateY(-50%);
+}
+
+.offer .box-container .box .contact span
+{
+    font-size: 20px;
+}
+
+.offer .box-container .box .contact h3
+{
+    font-size: 35px;
+}
+
+.offer .box-container .box .contact button
+{
+    background: #fff;
+}
+/*End Offer*/
+/*Start contact*/
+.contact .box-container
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.contact .box-container form
+{
+    width: 100%;
+}
+
+.contact .box-container form input
+{
+    width: 45%;
+    background: #eee;
+    padding: 20px;
+    margin: 40px 25px 32px 34px;
+}
+
+.contact .box-container form textarea
+{
+    display: block;
+    width: 100%;
+    margin: 40px 25px 32px 34px;
+    background: #eee;
+    padding: 20px;
+}
+.contact .box-container button
+{
+    margin: 20px auto;
+}
+/*End contact*/
+/*Start Footer*/
+
+.footer .icon button
+{
+    border-radius: 50%;
+    margin: 6px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.footer  .icon
+{
+    align-items: center;
+    text-align:center;
+    margin:20px auto;
+
+}
+
+.footer  .icon i
+{
+    text-align: center;
+}
+
+.footer hr
+{
+    width: 100%;
+    height: .5px;
+    background: #d6d0d0;
+}
+
+.footer .end p
+{
+    margin: 41px auto;
+    width: 100%;
+    height: 28px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 21px
+}
+
+.footer .end p span{color: #f5f50f;}
+
+.fa-times{
+    transform:rotate(-360deg);
+}
+/* End Footer*/
+
+/*Start Add*/
+.add1
+{
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+} 
+
+.add2
+{
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+} 
+
+main ol li .show{display: none;}
+/*End Add*/

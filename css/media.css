@@ -1,0 +1,40 @@
+@media (max-width:1200px) {
+    main .as
+    {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    main ol 
+    {
+        font-size: 20px;
+        margin-top: 11px;
+        margin-right: -16px;
+    }
+
+    main ul 
+    {
+        position: absolute;
+        z-index: 99999;
+        top: 154px;
+        left: -226px;
+        background: #ffc700f7;
+        width: 100%;
+        float: left;
+        transform: scale(0);
+    }
+
+    main ul li
+    {
+        width: 100%;
+        text-align: center;
+    }
+
+    .add3{transform: scale(1);}
+
+    .contact .box-container form input
+    {
+        width: 90%;
+    }
+}
